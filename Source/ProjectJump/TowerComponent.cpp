@@ -76,6 +76,9 @@ void UTowerComponent::Attack()
 		return;
 	}
 
+
+	BestEnemyComponent->Hurt(Damage);
+
 	UE_LOG(LogTemp, Warning, TEXT("Attacking %s"), *BestEnemy->GetName());
 }
 

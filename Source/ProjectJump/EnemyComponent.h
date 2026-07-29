@@ -19,7 +19,8 @@ public:
 
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Stats")
-	int32 Speed;
+	int32 Speed = 100;
+	int32 Health = 10;
 	UPROPERTY()
 	float DistanceMoved = 0;
 	UPROPERTY()
@@ -32,6 +33,9 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+	UFUNCTION()
+	virtual void Hurt(int32 Damage);
 
 		
 };

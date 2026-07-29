@@ -79,3 +79,13 @@ void UEnemyComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 	GetOwner()->SetActorLocationAndRotation(Pos, Rotation);
 }
 
+
+void UEnemyComponent::Hurt(int32 Damage) {
+	Health -= Damage;
+
+
+	if (Health <= 0) {
+		GetOwner()->Destroy();
+	}
+}
+

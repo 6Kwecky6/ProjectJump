@@ -21,6 +21,8 @@ public:
 	UPROPERTY()
 	TArray<UEnemyComponent*> Enemies;
 
+	int32 Damage = 1;
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
